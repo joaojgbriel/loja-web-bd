@@ -44,7 +44,7 @@ public class CarrinhoItemServlet extends HttpServlet {
 
         // Padrão POST-Redirect-GET: o navegador recebe 302 e faz um GET em /carrinho.
         // Assim, apertar F5 não reenvia o formulário.
-        response.sendRedirect(request.getContextPath() + "/carrinho");
+        Redirecionar.para(response, request.getContextPath() + "/carrinho");
     }
 
     @Override

@@ -61,6 +61,6 @@ public class LoginServlet extends HttpServlet {
 
         // Padrão POST-Redirect-GET: o navegador recebe 302 e faz um GET em /.
         // Assim, apertar F5 na página inicial não reenvia o formulário de login.
-        response.sendRedirect(request.getContextPath() + "/");
+        Redirecionar.para(response, request.getContextPath() + "/");
     }
 }

@@ -29,6 +29,6 @@ public class LogoutServlet extends HttpServlet {
         }
 
         // 3. Redireciona para a página inicial.
-        response.sendRedirect(request.getContextPath() + "/");
+        Redirecionar.para(response, request.getContextPath() + "/");
     }
 }
