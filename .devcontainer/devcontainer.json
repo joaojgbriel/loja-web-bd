@@ -1,0 +1,23 @@
+{
+    "name": "Loja Web - Java 17 + Maven",
+    "image": "mcr.microsoft.com/devcontainers/java:1-17",
+    "features": {
+        "ghcr.io/devcontainers/features/java:1": {
+            "version": "none",
+            "installMaven": "true"
+        }
+    },
+    "forwardPorts": [8080],
+    "portsAttributes": {
+        "8080": {
+            "label": "Loja Web",
+            "onAutoForward": "openBrowser"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": ["vscjava.vscode-java-pack"]
+        }
+    },
+    "postCreateCommand": "mvn -q -B dependency:resolve"
+}
